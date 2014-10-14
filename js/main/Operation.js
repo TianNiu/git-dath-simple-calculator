@@ -14,13 +14,13 @@ define(function(require) {
             /* getter and setter*/
             /* 特权方法*/
             this.getNum1 = function() {
-                return parseInt(num_1);
+                return parseFloat(num_1);
             }
             this.setNum1 = function(num) {
                 num_1 = num;
             }
             this.getNum2 = function() {
-                return parseInt(num_2);
+                return parseFloat(num_2);
             }
             this.setNum2 = function(num) {
                 num_2 = num;

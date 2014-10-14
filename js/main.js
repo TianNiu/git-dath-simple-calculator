@@ -15,6 +15,24 @@ define(function(require) {
     var num_2 = 0;
     var clear_input = false;
     var operator = "+";
+
+    /* View Calculator*/
+    /* */
+    var VCalculator = (function() {
+
+        function VCalculator() {
+
+        };
+        /**
+         * 静态方法:清空输入框
+         * @return {[type]} [description]
+         */
+        VCalculator.clearInput = function() {
+
+        };
+        return VCalculator;
+    })();
+
     /* bind event on the num buttons*/
     $(".nums button").each(function(index, ele) {
         $(ele).click(function(event) {
@@ -32,7 +50,8 @@ define(function(require) {
     $(".operators button").click(function() {
         num_1 = $input_result.val();
         operator = $.trim($(this).html());
-        $input_result.val("");
+        $input_result.val(operator);
+        clear_input = true;
     });
     /* when click the equal button*/
     $(".operators .equal").click(function() {
